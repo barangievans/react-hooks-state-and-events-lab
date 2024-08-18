@@ -1,15 +1,12 @@
-/* App.css */
 .App.dark {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .App.light {
-    background-color: #fff;
-    color: #000;
-  }
-  /* App.css */
+  background-color: black;
+  color: white;
+}
+
+.App.light {
+  background-color: white;
+  color: black;
+}
 .in-cart {
-    text-decoration: line-through;
-  }
-  
+  text-decoration: line-through;
+}
