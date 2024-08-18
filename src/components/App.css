@@ -1,12 +1,18 @@
+/* Default (Light Mode) */
+.App {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
 .App.dark {
   background-color: black;
   color: white;
 }
 
+/* Light Mode */
 .App.light {
   background-color: white;
   color: black;
-}
-.in-cart {
-  text-decoration: line-through;
 }

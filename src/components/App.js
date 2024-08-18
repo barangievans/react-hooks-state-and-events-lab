@@ -1,6 +1,7 @@
-// src/App.js
-import React from 'react';
-import ShoppingList from './ShoppingList';
+// src/components/App.js
+import React, { useState } from 'react';
+import ShoppingList from './ShoppingList'; // Ensure this path is correct
+import './App.css'; // Import your CSS file for styles
 
 const appData = [
   { id: 1, name: 'Apple', category: 'Fruits' },
@@ -10,9 +11,17 @@ const appData = [
 ];
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(prevMode => !prevMode);
+  };
+
   return (
-    <div className="App">
-      <h1>Grocery List</h1>
+    <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
+      <button onClick={toggleDarkMode}>
+        {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+      </button>
       <ShoppingList items={appData} />
     </div>
   );

@@ -24,7 +24,7 @@ function ShoppingList({ items }) {
           </option>
         ))}
       </select>
-      <ul className="items">
+      <ul className="items"> {/* Ensure this class name is "items" */}
         {filteredItems.map(item => (
           <Item key={item.id} name={item.name} />
         ))}
